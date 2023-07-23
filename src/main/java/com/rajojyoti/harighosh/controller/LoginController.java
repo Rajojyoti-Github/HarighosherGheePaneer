@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rajojyoti.harighosh.entities.User;
+import com.rajojyoti.harighosh.dto.UserCreateDTO;
+import com.rajojyoti.harighosh.dto.UserDTO;
+import com.rajojyoti.harighosh.entities.UserEntity;
 import com.rajojyoti.harighosh.service.UserLoginService;
 
 /**
@@ -27,8 +29,8 @@ public class LoginController {
 	UserLoginService userLoginService;
 	
 	
-	@PostMapping(value = "/login")
-	public ResponseEntity<User> login(@RequestBody User user){
+	@PostMapping(value = "/createUser")
+	public ResponseEntity<UserCreateDTO> login(@RequestBody UserDTO user){
 		
 		return new ResponseEntity<>(userLoginService.createUser(user), HttpStatus.OK);
 		

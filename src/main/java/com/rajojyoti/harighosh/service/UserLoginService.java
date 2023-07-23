@@ -2,12 +2,14 @@ package com.rajojyoti.harighosh.service;
 
 import org.springframework.stereotype.Service;
 
-import com.rajojyoti.harighosh.entities.User;
+import com.rajojyoti.harighosh.dto.UserCreateDTO;
+import com.rajojyoti.harighosh.dto.UserDTO;
+import com.rajojyoti.harighosh.entities.UserEntity;
 
-@Service
+
 public interface UserLoginService {
 
-	User createUser(User user);
+	UserCreateDTO createUser(UserDTO user);
 	
 	
 
